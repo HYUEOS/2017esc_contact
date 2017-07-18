@@ -14,7 +14,12 @@ public class DialActivity extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dial);
-    /** 형변환 해주는 이유형변환 해주는 이유 **/
+        /** 아 xml에서 버튼마다 온클릭 옵션에 다들  onClick 입력했습니다
+         * 이후에 Dial Acttivity 에 OnClickListener 인터페이스를 이용해서 온클릭 함수 만들거예요.**/
+
+
+
+        /** 형변환 해주는 이유형변환 해주는 이유 **/
         btn0=(Button)findViewById(R.id.button0);
         btn1=(Button)findViewById(R.id.button1);
         btn2=(Button)findViewById(R.id.button2);
