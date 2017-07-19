@@ -7,18 +7,19 @@ package com.sejin.esc_contact_2017.data;
 public class ContactData {
 
 
-    private String name, phoneNum, email;
+    private String name, phoneNum, mail;
 
+    public ContactData(){}
     public ContactData(String name, String phoneNum) {
         this.name = name;
         this.phoneNum = phoneNum;
     }
 
-    public ContactData(String name, String phoneNum, String email) {
+    public ContactData(String name, String phoneNum, String mail) {
         this.name = name;
         this.phoneNum = phoneNum;
 
-        this.email = email;
+        this.mail = mail;
     }
 
     public String getPhoneNum() {
@@ -29,14 +30,14 @@ public class ContactData {
         this.phoneNum = phoneNum;
     }
 
-    public String getEmail() {
-        return email;
+    public String getMail() {
+        return mail;
     }
 
 
-    public void setEmail(String email) {
+    public void setMail(String mail) {
 
-        this.email = email;
+        this.mail = mail;
     }
 
     public String getName() {
@@ -57,7 +58,7 @@ public class ContactData {
 
         if (!name.equals(that.name)) return false;
         if (!phoneNum.equals(that.phoneNum)) return false;
-        return email != null ? email.equals(that.email) : that.email == null;
+        return mail != null ? mail.equals(that.mail) : that.mail == null;
 
     }
 

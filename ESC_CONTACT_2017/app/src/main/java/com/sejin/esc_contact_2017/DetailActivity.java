@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import com.sejin.esc_contact_2017.R;
 import com.sejin.esc_contact_2017.data.ContactData;
 import com.sejin.esc_contact_2017.data.DummyData;
 
@@ -50,7 +49,8 @@ public class DetailActivity extends AppCompatActivity {
         contactData= DummyData.dummyList.get(position);
         name.setText(contactData.getName());
         phoneNum.setText(contactData.getPhoneNum());
-        mail.setText(contactData.getEmail());
+        mail.setText(contactData.getMail());
+
 
     }
 }

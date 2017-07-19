@@ -13,7 +13,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-public class DialActivity extends AppCompatActivity implements View.OnClickListener {
+public class DialActivity extends AppCompatActivity {
 
     Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9;
     Button btnAsteroid, btn0, btnCrossHatch;
@@ -60,7 +60,6 @@ public class DialActivity extends AppCompatActivity implements View.OnClickListe
     }
 
 
-    @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.button0:
