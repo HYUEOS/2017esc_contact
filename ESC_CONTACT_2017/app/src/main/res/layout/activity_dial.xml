@@ -14,7 +14,6 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_weight="0.11"
-        android:text="TextView"
         android:textAlignment="center" />
 
     <LinearLayout
@@ -174,7 +173,7 @@
         android:orientation="horizontal">
 
         <ImageButton
-            android:id="@+id/imageButton2"
+            android:id="@+id/callImgBtn"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -182,12 +181,21 @@
             app:srcCompat="@android:drawable/stat_sys_phone_call_forward" />
 
         <ImageButton
-            android:id="@+id/imageButton"
+            android:id="@+id/nextActivityImgBtn"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:onClick="onClick"
             app:srcCompat="@android:drawable/ic_media_ff" />
+
+        <ImageButton
+            android:id="@+id/eraseImgBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:src="?android:attr/homeAsUpIndicator"
+            android:text="Button" />
     </LinearLayout>
 
 </LinearLayout>
