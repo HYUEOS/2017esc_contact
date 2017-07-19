@@ -19,7 +19,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".ContactsAcitivity" />
-        <activity android:name=".ContactsActivity"></activity>
+        <activity android:name=".ContactsActivity" />
+        <activity android:name=".DetailActivity" />
+        <activity android:name=".EditActivity"></activity>
     </application>
 
 </manifest>
