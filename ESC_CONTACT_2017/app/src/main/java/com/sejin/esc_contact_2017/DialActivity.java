@@ -123,10 +123,11 @@ public class DialActivity extends AppCompatActivity implements View.OnClickListe
                     );
                 } else startActivity(callIntent);
                 break;
-            
+
+            case R.id.nextActivityImgBtn:
+                startActivity(new Intent(this, ContactsActivity.class));
         }
     }
-
 
     @Override
     public void onRequestPermissionsResult(int requestCode,

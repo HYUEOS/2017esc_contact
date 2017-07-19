@@ -3,4 +3,9 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="box_gray">#D0D0D0</color>
+    <color name="btn_border">#707070</color>
+    <color name="btn_pressed_bg">#EEEEEE</color>
+    <color name="layout_pressed">#3ED5C0</color>
+    <color name="list_item_bg_pressed">#F6F6F6</color>
 </resources>
