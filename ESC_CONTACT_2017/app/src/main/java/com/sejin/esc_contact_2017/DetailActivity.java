@@ -1,7 +1,9 @@
 package com.sejin.esc_contact_2017;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -32,6 +34,15 @@ public class DetailActivity extends AppCompatActivity {
         mail = (TextView)findViewById(R.id.detail_mail);
 
 
+        editBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(DetailActivity.this, EditActivity.class);
+                intent.putExtra("position",position);
+                startActivity(intent);
+
+            }
+        });
 
     }
 

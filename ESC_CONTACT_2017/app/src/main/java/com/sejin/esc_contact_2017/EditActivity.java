@@ -31,6 +31,8 @@ public class EditActivity extends AppCompatActivity {
         etName = (EditText) findViewById(R.id.edit_name);
         etMail = (EditText) findViewById(R.id.edit_mail);
         etPhoneNum = (EditText) findViewById(R.id.edit_phone_num);
+        tvTitle= (TextView) findViewById(R.id.edit_title);
+
 
         //수정하는경우
         if (position > -1) {
