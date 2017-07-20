@@ -3,7 +3,6 @@ package com.sejin.esc_contact_2017;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.media.Image;
 import android.net.Uri;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -33,21 +32,21 @@ public class DialActivity extends AppCompatActivity {
 
 
         /** 형변환 해주는 이유형변환 해주는 이유 **/
-        btn0 = (Button) findViewById(R.id.button0);
-        btn1 = (Button) findViewById(R.id.button1);
-        btn2 = (Button) findViewById(R.id.button2);
-        btn3 = (Button) findViewById(R.id.button3);
-        btn4 = (Button) findViewById(R.id.button4);
-        btn5 = (Button) findViewById(R.id.button5);
-        btn6 = (Button) findViewById(R.id.button6);
-        btn7 = (Button) findViewById(R.id.button7);
-        btn8 = (Button) findViewById(R.id.button8);
-        btn9 = (Button) findViewById(R.id.button9);
+        btn0 = (Button) findViewById(R.id.dial_btn_0);
+        btn1 = (Button) findViewById(R.id.dial_btn_1);
+        btn2 = (Button) findViewById(R.id.dial_btn_2);
+        btn3 = (Button) findViewById(R.id.dial_btn_3);
+        btn4 = (Button) findViewById(R.id.dial_btn_4);
+        btn5 = (Button) findViewById(R.id.dial_btn_5);
+        btn6 = (Button) findViewById(R.id.dial_btn_6);
+        btn7 = (Button) findViewById(R.id.dial_btn_7);
+        btn8 = (Button) findViewById(R.id.dial_btn_8);
+        btn9 = (Button) findViewById(R.id.dial_btn_9);
 
-        btnAsteroid = (Button) findViewById(R.id.button_asteroid);
-        btnCrossHatch = (Button) findViewById(R.id.button_Crosshatch);
-        btnErase = (ImageButton) findViewById(R.id.eraseImgBtn);
-        tvNumberPanel = (TextView) findViewById(R.id.numPanel);
+        btnAsteroid = (Button) findViewById(R.id.dial_btn_asteroid);
+        btnCrossHatch = (Button) findViewById(R.id.dial_btn_crosshatch);
+        btnErase = (ImageButton) findViewById(R.id.dial_btn_erase);
+        tvNumberPanel = (TextView) findViewById(R.id.dial_panel);
 
         btnErase.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
@@ -101,7 +100,7 @@ public class DialActivity extends AppCompatActivity {
             case R.id.button_Crosshatch:
                 tvNumberPanel.append("#");
                 break;
-            case R.id.eraseImgBtn:
+            case R.id.dial_btn_erase:
                 String temp = tvNumberPanel.getText().toString();
                 if (temp.length() > 0)
                     tvNumberPanel.setText(temp.substring(0, temp.length() - 1));
@@ -136,12 +135,11 @@ public class DialActivity extends AppCompatActivity {
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     Intent callIntent = new Intent("android.intent.action.CALL", Uri.parse("tel:" + tvNumberPanel.getText().toString()));
                     startActivity(callIntent);
+                    return;
+                } else {
+                    return;
                 }
-                else
-                {
 
-                }
-                return;
             }
         }
     }
