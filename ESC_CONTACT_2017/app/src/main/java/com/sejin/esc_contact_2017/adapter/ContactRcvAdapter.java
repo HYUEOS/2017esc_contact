@@ -1,8 +1,10 @@
 package com.sejin.esc_contact_2017.adapter;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -80,6 +82,43 @@ public class ContactRcvAdapter extends RecyclerView.Adapter<ContactRcvAdapter.Vi
                 context.startActivity(intent);
             }
         });
+        holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+
+                AlertDialog.Builder dialog = new AlertDialog.Builder(context);
+
+                dialog.setMessage("정말로 삭제하시겠습니까?");
+                dialog.setCancelable(true);
+                dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        removeItemView(position);
+
+
+                    }
+                });
+
+                dialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+
+                dialog.show();
+
+
+                return false;
+            }
+        });
+
+    }
+
+    private void removeItemView(int position) {
+        contactList.remove(position);
+        notifyItemRemoved(position);
+        notifyItemRangeChanged(position,contactList.size());
 
     }
 

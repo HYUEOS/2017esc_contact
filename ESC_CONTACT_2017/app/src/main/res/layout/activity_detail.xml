@@ -216,16 +216,6 @@
         android:orientation="horizontal">
 
         <ImageButton
-            android:id="@+id/detail_share_btn"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@null"
-            android:padding="5dp"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/contact_detail_share" />
-
-        <ImageButton
             android:id="@+id/detail_delete_btn"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
